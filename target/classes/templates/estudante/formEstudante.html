@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+  <title>ID Estudante</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+  <body>
+
+    <h1>Cadastro de Estudantes:</h1>
+    <h3><a href="/estudantes" class="waves-effect waves-light btn"><i class="material-icons left">check</i>Estudante</a></h3>
+    <form class="container" method="post">
+
+      <div class="row">
+        <div class="input-field col s12">
+          Nome: <input type="text" value="" name="nome"/>
+        </div>
+        <div class="input-field col s3">
+          CPF: <input type="text" value="" name="cpf"/>
+        </div>
+        <div class="input-field col s3">
+          RG: <input type="text" value="" name="rg"/>
+        </div>
+        <div class="input-field col s3">
+          Nascimento: <input type="date" value="" name="dataNascimento"/>
+        </div>
+        <div class="input-field col s3">
+          Matricula: <input type="text" value="" name="matricula"/>
+        </div>
+      </div>
+      <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+    </form>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  </body>
+
+</html>
