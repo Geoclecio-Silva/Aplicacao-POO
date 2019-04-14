@@ -1,10 +1,14 @@
 package com.android.estudanteapp.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.android.estudanteapp.models.Estudante;
 import com.android.estudanteapp.repository.EstudanteRepository;
@@ -21,9 +25,13 @@ public class EstudanteController {
 	}
 	
 	@RequestMapping(value="/cadastrarEstudante", method=RequestMethod.POST)
-	public String form(Estudante estudante) {
-		
+	public String form(@Valid Estudante estudante, BindingResult result, RedirectAttributes attributes) {
+		if(result.hasErrors()) {
+			attributes.addFlashAttribute("mensagem", "Campos vazios! Por favor preencha todos os campos (^-^)");
+			return "redirect:/cadastrarEstudante";
+		}
 		er.save(estudante);
+		attributes.addFlashAttribute("mensagem", "Cadastrado com Sucesso!");
 		
 		return "redirect:/cadastrarEstudante";
 	}

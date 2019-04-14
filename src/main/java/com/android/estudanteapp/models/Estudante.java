@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 public class Estudante implements Serializable{
 	
@@ -16,10 +18,15 @@ public class Estudante implements Serializable{
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private long codigo;
 	
+	@NotEmpty
 	private String nome;
+	@NotEmpty
 	private String cpf;
+	@NotEmpty
 	private String rg;
+	@NotEmpty
 	private String dataNascimento;
+	@NotEmpty
 	private String matricula;
 	
 	public Estudante() {

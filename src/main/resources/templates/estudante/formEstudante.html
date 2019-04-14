@@ -16,9 +16,12 @@
 
     <h1>Cadastro de Estudantes:</h1>
     <h3><a href="/estudantes" class="waves-effect waves-light btn"><i class="material-icons left">check</i>Estudante</a></h3>
+    
+    
+    
     <form class="container" method="post">
-
       <div class="row">
+      	<th:block th:include="mensagemValidacao"></th:block>
         <div class="input-field col s12">
           Nome: <input type="text" value="" name="nome"/>
         </div>
