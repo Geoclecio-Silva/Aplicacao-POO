@@ -43,5 +43,11 @@ public class EstudanteController {
 		mv.addObject("estudantes", estudantes);
 		return mv;
 	}
+	
+	@RequestMapping("/entrar")
+	public String face() {
+		return "face";
+	}
+	
 
 }
