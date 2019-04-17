@@ -49,5 +49,10 @@ public class EstudanteController {
 		return "face";
 	}
 	
+	@RequestMapping("/logar")
+	public String login() {
+		return "login";
+	}
+	
 
 }

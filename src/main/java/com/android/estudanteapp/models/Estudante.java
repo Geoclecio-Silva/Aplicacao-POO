@@ -18,6 +18,7 @@ public class Estudante implements Serializable{
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private long codigo;
 	
+	
 	@NotEmpty
 	private String nome;
 	@NotEmpty
