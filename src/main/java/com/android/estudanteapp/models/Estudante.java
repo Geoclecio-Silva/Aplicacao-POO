@@ -29,63 +29,80 @@ public class Estudante implements Serializable{
 	private String dataNascimento;
 	@NotEmpty
 	private String matricula;
+	@NotEmpty
+	private byte[] foto;
 	
 	public Estudante() {
 		
 	}
-	public Estudante(String nome, String cpf, String rg, String dataNascimento, String matricula) {
+
+	public Estudante(long codigo, String nome, String cpf, String rg, String dataNascimento, String matricula,
+			byte[] foto) {
 		super();
+		this.codigo = codigo;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;
 		this.dataNascimento = dataNascimento;
 		this.matricula = matricula;
+		this.foto = foto;
 	}
-	
-	
+
 	public long getCodigo() {
 		return codigo;
 	}
+
 	public void setCodigo(long codigo) {
 		this.codigo = codigo;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public String getCpf() {
 		return cpf;
 	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
 	public String getRg() {
 		return rg;
 	}
+
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
+
 	public String getDataNascimento() {
 		return dataNascimento;
 	}
+
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+
 	public String getMatricula() {
 		return matricula;
 	}
+
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-	@Override
-	public String toString() {
-		return "Nome: " + nome + "\nCPF: " + cpf + "\nRG: " + rg + "\nData de Nascimento: " + dataNascimento
-				+ "\nMatricula: " + matricula;
+
+	public byte[] getFoto() {
+		return foto;
+	}
+
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
 	}
 	
 	
-	
-
 }
