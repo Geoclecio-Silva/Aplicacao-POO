@@ -44,11 +44,6 @@ public class EstudanteController {
 		return mv;
 	}
 	
-	@RequestMapping("/entrar")
-	public String face() {
-		return "face";
-	}
-	
 	@RequestMapping("/logar")
 	public String login() {
 		return "login";

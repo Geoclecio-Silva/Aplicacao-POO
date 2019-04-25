@@ -29,15 +29,12 @@ public class Estudante implements Serializable{
 	private String dataNascimento;
 	@NotEmpty
 	private String matricula;
-	@NotEmpty
-	private byte[] foto;
 	
 	public Estudante() {
 		
 	}
 
-	public Estudante(long codigo, String nome, String cpf, String rg, String dataNascimento, String matricula,
-			byte[] foto) {
+	public Estudante(long codigo, String nome, String cpf, String rg, String dataNascimento, String matricula) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
@@ -45,7 +42,7 @@ public class Estudante implements Serializable{
 		this.rg = rg;
 		this.dataNascimento = dataNascimento;
 		this.matricula = matricula;
-		this.foto = foto;
+		
 	}
 
 	public long getCodigo() {
@@ -95,14 +92,4 @@ public class Estudante implements Serializable{
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-
-	public byte[] getFoto() {
-		return foto;
-	}
-
-	public void setFoto(byte[] foto) {
-		this.foto = foto;
-	}
-	
-	
 }
