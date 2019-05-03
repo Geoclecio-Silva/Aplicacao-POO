@@ -13,8 +13,23 @@
 
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="materialize/style/styleCss.css" />
+
 </head>
 <body class="background-color purple darken-3">
+
+	<header>
+
+		<nav>
+			<div class="nav-wrapper color purple darken-1">
+				<a href="#" class="brand-logo center">ID-Card</a>
+				<ul id="nav-mobile" class="left hide-on-med-and-down"></ul>
+			</div>
+		</nav>
+
+	</header>
+
 	<div class="white-text">
 		<h1 class="center-align">Cadastrar</h1>
 	</div>
@@ -23,41 +38,36 @@
 			<div class="white-text">
 				<th:block th:include="mensagemValidacao"></th:block>
 			</div>
-			<div class="input-field col s12 m12 l12">
+			<div class="input-field col s6 m6 l6">
 				<div class="white-text">Nome:</div>
 				<input class="white-text" type="text" value="" name="nome"
 					placeholder="Nome completo" />
 			</div>
-			<div class="input-field col s12 m12 l12">
+			<div class="input-field col s6 m6 l6">
 				<div class="white-text">CPF:</div>
 				<input class="white-text" type="text" value="" name="cpf"
 					placeholder="Digite o nº do seu CPF" />
 			</div>
-			<div class="input-field col s12 m12 l12">
+			<div class="input-field col s6 m6 l6">
 				<div class="white-text">RG:</div>
 				<input class="white-text" type="text" value="" name="rg"
 					placeholder="Digite o nº do seu RG" />
 			</div>
-			<div class="input-field col s12 m12 l12">
+			<div class="input-field col s4 m4 l4">
 				<div class="white-text">Nascimento:</div>
 				<input class="white-text" type="date" value="" name="dataNascimento"
 					placeholder="Digite sua data de nascimento" />
 			</div>
-			<div class="input-field col s12 m12 l12">
+			<div class="input-field col s4 m4 l4">
 				<div class="white-text">Matricula:</div>
 				<input class="white-text" type="text" value="" name="matricula"
 					placeholder="Digite o nº de sua matricula" />
 			</div>
 		</div>
 
-		<div class="right-align">
-			<button class="waves-effect waves-light btn" type="submit">Salvar</button>
-		</div>
-
-		<div class="left-align">
-			<h3>
-				<a href="/logar" class="waves-effect waves-light btn">Login</a>
-			</h3>
+		<div class="center-align">
+			<button class="waves-effect waves-light btn purple darken-1"
+				type="submit">Salvar</button>
 		</div>
 
 	</form>

@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -33,7 +34,7 @@ public class EstudanteController {
 		er.save(estudante);
 		attributes.addFlashAttribute("mensagem", "Cadastrado com Sucesso!");
 		
-		return "redirect:/cadastrarEstudante";
+		return "redirect:/estudantes";
 	}
 	
 	@RequestMapping("/estudantes")
@@ -44,10 +45,10 @@ public class EstudanteController {
 		return mv;
 	}
 	
-	@RequestMapping("/logar")
-	public String login() {
-		return "login";
-	}
+	  @GetMapping("/login")
+	  public String login() {
+	    return "login"; // <<< Retorna a página de login
+	  }
 	
 
 }

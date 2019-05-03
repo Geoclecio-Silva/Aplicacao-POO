@@ -1,4 +1,4 @@
-package com.android.estudanteapp;
+package com.android.estudanteapp.data;
 
 import javax.sql.DataSource;
 
